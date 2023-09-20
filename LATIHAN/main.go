@@ -74,21 +74,21 @@ func main() {
 	} else if pilih == 2 {
 		var barang2 = "lemari"
 		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang2, kuantitas)
-		totalharga = kuantitas * 5000
+		totalharga = kuantitas * 10000
 		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
 		cetakinvoice(barang2, kuantitas, totalharga)
 
 	} else if pilih == 3 {
 		var barang3 = "Sepeda"
 		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang3, kuantitas)
-		totalharga = kuantitas * 5000
+		totalharga = kuantitas * 15000
 		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
 		cetakinvoice(barang3, kuantitas, totalharga)
 
 	} else if pilih == 4 {
 		var barang4 = "Laptop"
 		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang4, kuantitas)
-		totalharga = kuantitas * 5000
+		totalharga = kuantitas * 25000
 		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
 		cetakinvoice(barang4, kuantitas, totalharga)
 
