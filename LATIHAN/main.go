@@ -17,7 +17,7 @@ func isError(err error) bool {
 }	
 
 func createfile(){
-	// deteksi apakah file sudah ada
+    // deteksi apakah file sudah ada
     var _, err = os.Stat(path)
 	fmt.Println("==> file sudah ada dengan nama", path)
 
@@ -38,7 +38,7 @@ func cetakinvoice(barang string, jumlah int, harga int) {
     defer file.Close()
 
     // tulis data ke file
-	var invoice = barang + ", Sebanyak " + strconv.Itoa(jumlah) + " pcs, dengan total harga Rp." + strconv.Itoa(harga) +"\n"
+    var invoice = barang + ", Sebanyak " + strconv.Itoa(jumlah) + " pcs, dengan total harga Rp." + strconv.Itoa(harga) +"\n"
     _, err = file.WriteString(invoice)
     if isError(err) { return }
 
