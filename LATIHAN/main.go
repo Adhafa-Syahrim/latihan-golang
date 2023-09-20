@@ -6,8 +6,10 @@ import (
 	"strconv"
 )
 
+// deklarasi variabel lokasi file dan file yang dibuat
 var path = "LATIHAN/invoice.txt"
 
+// cetak error
 func isError(err error) bool {
     if err != nil {
         fmt.Println(err.Error())
@@ -28,7 +30,6 @@ func createfile(){
         defer file.Close()
 		fmt.Println("==> file berhasil dibuat", path)
     }
-
 }
 
 func cetakinvoice(barang string, jumlah int, harga int) {
@@ -50,8 +51,13 @@ func cetakinvoice(barang string, jumlah int, harga int) {
 }
 
 func main() {
+	// bikin file (panggil fungsi)
 	createfile()
+
+	// deklarasi variabel
 	var totalharga, kuantitas, pilih int
+
+	// print list barang dan harga
 	fmt.Println("Program List Harga Barang")
 	fmt.Print(`
 	1. Ikan Bilis	Rp. 5.000
@@ -59,39 +65,40 @@ func main() {
 	3. Sepeda	Rp. 15.000
 	4. Laptop	Rp. 25.000
 	`)
+
+	// input pilihan
 	fmt.Println("\nSilahkan pilih barang yang diinginkan =")
 	fmt.Scanln(&pilih)
 	fmt.Println("Silahkan masukkan jumlah barang yang dipilih =")
 	fmt.Scanln(&kuantitas)
 
+	// sistem pengkondisian jenis barang yang dipilih
 	if pilih == 1 {
 		var barang1 = "ikan bilis"
 		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang1, kuantitas)
 		totalharga = kuantitas * 5000
 		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v\n", totalharga)
-		cetakinvoice(barang1, kuantitas, totalharga)
+		cetakinvoice(barang1, kuantitas, totalharga) //panggil fungsi cetakinvoice
 
 	} else if pilih == 2 {
 		var barang2 = "lemari"
 		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang2, kuantitas)
 		totalharga = kuantitas * 10000
 		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
-		cetakinvoice(barang2, kuantitas, totalharga)
+		cetakinvoice(barang2, kuantitas, totalharga) //panggil fungsi cetakinvoice
 
 	} else if pilih == 3 {
 		var barang3 = "Sepeda"
 		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang3, kuantitas)
 		totalharga = kuantitas * 15000
 		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
-		cetakinvoice(barang3, kuantitas, totalharga)
+		cetakinvoice(barang3, kuantitas, totalharga) //panggil fungsi cetakinvoice
 
 	} else if pilih == 4 {
 		var barang4 = "Laptop"
 		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang4, kuantitas)
 		totalharga = kuantitas * 25000
 		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
-		cetakinvoice(barang4, kuantitas, totalharga)
-
+		cetakinvoice(barang4, kuantitas, totalharga) //panggil fungsi cetakinvoice
 	}
-
 }
