@@ -74,32 +74,32 @@ func main() {
 
 	// sistem pengkondisian jenis barang yang dipilih
 	if pilih == 1 {
-		var barang1 = "ikan bilis"
-		var harga1 = 5000
+		barang1 := "ikan bilis"
+		harga1 := 5000
 		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang1, kuantitas)
 		totalharga = kuantitas * harga1
 		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v\n", totalharga)
 		cetakinvoice(barang1, kuantitas, totalharga) //panggil fungsi cetakinvoice
 
 	} else if pilih == 2 {
-		var barang2 = "lemari"
-		var harga2 = 10000
+		barang2 := "lemari"
+		harga2 := 10000
 		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang2, kuantitas)
 		totalharga = kuantitas * harga2
 		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
 		cetakinvoice(barang2, kuantitas, totalharga) //panggil fungsi cetakinvoice
 
 	} else if pilih == 3 {
-		var barang3 = "Sepeda"
-		var harga3 = 15000
+		barang3 := "Sepeda"
+		harga3 := 15000
 		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang3, kuantitas)
 		totalharga = kuantitas * harga3
 		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
 		cetakinvoice(barang3, kuantitas, totalharga) //panggil fungsi cetakinvoice
 
 	} else if pilih == 4 {
-		var barang4 = "Laptop"
-		var harga4 = 25000
+		barang4 := "Laptop"
+		harga4 := 25000
 		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang4, kuantitas)
 		totalharga = kuantitas * harga4
 		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
