@@ -50,6 +50,12 @@ func cetakinvoice(barang string, jumlah int, harga int) {
     fmt.Println("==> invoice berhasil ditambahkan")
 }
 
+// fungsi cetak cli
+func cetakcli(barang string, kuantitas int, totalharga int){
+	fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang, kuantitas)
+	fmt.Printf("Harga yang harus anda bayar adalah Rp. %v\n", totalharga)
+}
+
 func main() {
 	// bikin file (panggil fungsi)
 	createfile()
@@ -76,33 +82,29 @@ func main() {
 	if pilih == 1 {
 		barang1 := "ikan bilis"
 		harga1 := 5000
-		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang1, kuantitas)
 		totalharga = kuantitas * harga1
-		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v\n", totalharga)
+		cetakcli(barang1, kuantitas, totalharga)
 		cetakinvoice(barang1, kuantitas, totalharga) //panggil fungsi cetakinvoice
 
 	} else if pilih == 2 {
 		barang2 := "lemari"
 		harga2 := 10000
-		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang2, kuantitas)
 		totalharga = kuantitas * harga2
-		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
+		cetakcli(barang2, kuantitas, totalharga)
 		cetakinvoice(barang2, kuantitas, totalharga) //panggil fungsi cetakinvoice
 
 	} else if pilih == 3 {
 		barang3 := "Sepeda"
 		harga3 := 15000
-		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang3, kuantitas)
 		totalharga = kuantitas * harga3
-		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
+		cetakcli(barang3, kuantitas, totalharga)
 		cetakinvoice(barang3, kuantitas, totalharga) //panggil fungsi cetakinvoice
 
 	} else if pilih == 4 {
 		barang4 := "Laptop"
 		harga4 := 25000
-		fmt.Printf("Barang yang anda pilih adalah %v dengan jumlah sebanyak %v\n", barang4, kuantitas)
 		totalharga = kuantitas * harga4
-		fmt.Printf("Harga yang harus anda bayar adalah Rp. %v", totalharga)
+		cetakcli(barang4, kuantitas, totalharga)
 		cetakinvoice(barang4, kuantitas, totalharga) //panggil fungsi cetakinvoice
 	}
 }
